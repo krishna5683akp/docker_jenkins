@@ -8,7 +8,13 @@ pipeline {
         }
         stage ("sh") {
             steps {
-                sh "docker info"
+                sh """sudo apt update
+                curl -fsSL https://test.docker.com -o test-docker.sh
+                sh test-docker.sh
+                sudo usermod -aG docker ubuntu
+                systemctl restart docker
+                docker info"""
+
             }
         }
     }
