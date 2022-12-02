@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("git"){
             steps {
-                git branch: main, url: https://github.com/krishna5683akp/docker_jenkins.git
+                git branch: "master", url: "https://github.com/krishna5683akp/docker_jenkins.git"
             }
         }
         stage ("sh") {
