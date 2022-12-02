@@ -1,5 +1,5 @@
 pipeline {
-    agent (label "krishna")
+    agent { label 'krishna' }
     stages {
         stage ("git"){
             steps {
